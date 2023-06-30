@@ -59,7 +59,7 @@ function StartButton({ disabled, size, variant, children }) {
         </StyledButton>
       </Link>
 
-      <Link to='/MainPage'>
+      <Link to='/main'>
       <StyledButton
         disabled={disabled}
         sizeStyle={sizeStyle}

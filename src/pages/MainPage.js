@@ -1,13 +1,19 @@
 import React from "react";
+import StartHeader from "../components/StartHeader";
 
 const style = {
-    fontSize : 24,
+    fontSize: 24,
 }
 
 export default function MainPage() {
     return (
-        <p style={style}>
-        성공!
-        </p>
+        <div>
+            <StartHeader />
+
+            <p style={style}>
+            메 인 페 이 지
+            </p>
+        </div>
+
     )
 }
