@@ -1,6 +1,7 @@
 import React   from "react";
 import { Link } from "react-router-dom";
 import styled, { css } from "styled-components";
+import imgA from '../components/KakaoLogo.png'
 
 const SIZES = {
   sm: css`
@@ -40,7 +41,8 @@ const VARIANTS = {
 
 const ButtonGroup = styled.div`
   display: flex;
-  margin-right: 10px;
+  margin-top: 400px;
+  margin-right: 0px;
 `
 
 function StartButton({ disabled, size, variant, children }) {
@@ -50,33 +52,34 @@ function StartButton({ disabled, size, variant, children }) {
   return (
     <ButtonGroup>
       <Link to='/login'>
-        <StyledButton
+        <StyledButton1
           disabled={disabled}
           sizeStyle={sizeStyle}
           variantStyle={variantStyle}
         >
-          {children} 카카오로 로그인하기
-        </StyledButton>
+          {children} <img alt='' src={imgA}></img>  카카오로 로그인하기
+        </StyledButton1>
       </Link>
 
       <Link to='/main'>
-      <StyledButton
+      <StyledButton2
         disabled={disabled}
         sizeStyle={sizeStyle}
         variantStyle={variantStyle}
       >
         {children} 비회원으로 계속보기
-      </StyledButton>
+      </StyledButton2>
       </Link>
     </ButtonGroup>
   );
 }
 
-const StyledButton = styled.button`
+const StyledButton1 = styled.button`
   ${(p) => p.sizeStyle}
   ${(p) => p.variantStyle}
 
   border: none;
+  border-radius: 30px;
   cursor: pointer;
   width: 500px;
   height: 100px;
@@ -84,9 +87,39 @@ const StyledButton = styled.button`
   font-size: 32px;
   font-weight: bold;
   padding: var(--button-padding, 12px 16px);
-  background: var(--button-bg-color, #000000);
+  background: var(--button-bg-color, #FEE500);
+  color: var(--button-color, #2D2D2D);
+  margin-inline: 30px;
+
+  &:active,
+  &:hover,
+  &:focus {
+    background: var(--button-hover-bg-color, #025ce2);
+  }
+
+  &:disabled {
+    cursor: default;
+    opacity: 0.5;
+    background: var(--button-bg-color, #025ce2);
+  }
+`;
+
+const StyledButton2 = styled.button`
+  ${(p) => p.sizeStyle}
+  ${(p) => p.variantStyle}
+
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  width: 500px;
+  height: 100px;
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 32px;
+  font-weight: bold;
+  padding: var(--button-padding, 12px 16px);
+  background: var(--button-bg-color, #00657B);
   color: var(--button-color, #ffffff);
-  margin-inline: 10px;
+  margin-inline: 30px;
 
   &:active,
   &:hover,

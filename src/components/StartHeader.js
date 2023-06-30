@@ -1,26 +1,20 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
+import "./StartHeader.css";    
 
 const main1 = {
     color: "white",
-    fontSize: 128,
+    marginTop: 10,
+    marginBottom: 100,
+    fontSize: 108,
     fontWeight: 'bold',
-    margin: 1,
-  }
-  
-  const main2 = {
-    color: "white",
-    fontSize: 48,
-    fontWeight: 'bold',
-  }
-  
+    textShadow: '1px 2px 9px #000000',
+}
+
 export default function StartHeader() {
     return (
-        <div className="App-header">
+        <div class = "Start-header">
             <p style={main1}>
                 MOIM
-            </p>
-            <p style={main2}>
-                모임: 노인을 위한 나라는 있다
             </p>
         </div>
     )

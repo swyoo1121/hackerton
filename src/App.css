@@ -2,3 +2,17 @@
   text-align: center;
   background-color: #626567;
 }
+
+.App-StartMain {
+  display: flex;
+  height: 100vh;
+  background-image: url(./components/background.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  justify-content: top;
+  color: white;  
+}
