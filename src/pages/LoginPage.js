@@ -1,13 +1,19 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
+import StartHeader from "../components/StartHeader";
 
 const style = {
-    fontSize : 24,
+    fontSize: 24,
 }
 
 export default function LoginPage() {
     return (
-        <p style={style}>
-        로그인!
-        </p>
+        <div>
+            <StartHeader />
+
+            <p style={style}>
+                로그인!
+            </p>
+        </div>
+
     )
 }
